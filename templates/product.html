@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-parallax page-title-dark page-title-center include-header" style="background-image: url('demos/restaurant/images/sections/food-menu.jpg'); background-size: cover; padding: 120px 0 180px;" data-bottom-top="background-position:0 0px;" data-top-bottom="background-position:0px -300px;">
+
+			<div class="container clearfix">
+				<h1 class="font-secondary text-capitalize ls0" style="font-size: 74px;">Menu</h1>
+				<span class="font-weight-normal">Choose Items from Our Menu</span>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+				<div class="container">
+
+					<div class="tabs tabs-justify" id="tab-1">
+
+						<ul class="tab-nav clearfix border-bottom-0">
+							<a href="{% url 'all_products' %}" class="button button-border button-small button-black button-dark button-circle mr-5" style="padding-right: 10%;">Ähli harytlar</a>                                                   
+
+                            {% for i in category %}
+							<a href="{% url 'category' i.id %}" class="button button-border button-small button-black button-dark button-circle mr-5" style="padding-right: 10%;"><img src="{{i.icon.url}}" style="max-width: 30px;" alt="Image">{{i.name}}</a>                                                   
+                            {% endfor %}
+                        </ul>
+
+						<div class="tab-container mt-4">
+
+							<div class="tab-content" id="tabs-breakfast">
+
+								<div class="row gutter-40">
+                                    {% for i in product %}
+									<div class="col-lg-3 col-md-6">
+										<div class="portfolio-item">
+											<a href="{% url 'category' i.id %}" class="portfolio-image"><img src="{{i.image.url}}" alt="1" class="rounded"></a>
+											<div class="portfolio-desc pt-2">
+												<h4 class="mb-1"><a href="#">{{i.name}}</a></h4>
+												<div class="item-price">{{i.category}}</div>
+											</div>
+										</div>
+									</div>
+                                    {% endfor %}
+									
+								</div>
+
+							</div>
+							
+						</div>
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('demos/restaurant/images/sketch-header.png') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
+		</section><!-- #content end -->
+{% endblock %}
