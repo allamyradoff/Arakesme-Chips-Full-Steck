@@ -59,3 +59,29 @@ def category(request, id):
         'category': category,
     }
     return render(request, 'product.html', context)
+
+
+def contact(request):
+    
+
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone_number = request.POST.get('phone_number')
+        message = request.POST.get('message')
+
+        data = {
+            'name': name,
+            'email': email,
+            'phone_number': phone_number,
+            'message': message,
+        }
+        
+
+
+ 
+
+
+    return render(request, 'contacts.html')
+

@@ -159,3 +159,24 @@ class AboutUs(models.Model):
     class Meta:
         verbose_name = 'Biz barada maglumat'
         verbose_name_plural = "Biz barada maglumatlar"
+
+
+
+class ContactUs(models.Model):
+    
+    email = models.EmailField(max_length=50, verbose_name="Email")
+    name = models.CharField(max_length=100, verbose_name="Name")
+    phone = models.CharField(max_length=50, verbose_name="Phone")
+    message = models.TextField(verbose_name="Message")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        ordering = ("-created_at",)
+
+
+    class Meta:
+        verbose_name = 'Обратная связь'
+        verbose_name_plural = 'Обратная связь'
