@@ -3,11 +3,12 @@
 {% load static %}
 {% block content %}
 
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url({% static './tayyn/about/banner.webp' %});">
+<section id="page-title" class="page-title-parallax page-title-dark page-title-center include-header" style="background-image: url('demos/restaurant/images/sections/food-menu.jpg'); background-size: cover; padding: 120px 0 180px;" data-bottom-top="background-position:0 0px;" data-top-bottom="background-position:0px -300px;">
 
-    <h2 class="l-text2 t-center">
-        Контакты
-    </h2>
+    <div class="container clearfix">
+        <h1 class="font-secondary text-capitalize ls0" style="font-size: 74px;">Menu</h1>
+        <span class="font-weight-normal">Choose Items from Our Menu</span>
+    </div>
 
 </section>
 
@@ -33,7 +34,7 @@
 
 
             <div class="col-md-6 p-b-30" >
-                <form class="leave-comment"  method="POST">
+                <form class="leave-comment"  action="{% url 'contact' %}"  method="POST">
                     <h4 class="m-text26 p-b-36 p-t-15">
                         Напишите нам
                     </h4>
@@ -66,6 +67,55 @@
                     
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div class="container section-contact topmargin-lg clearfix" style="margin-top: -50%;">
+        <div class="row clearfix">
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-map"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Salgymyz</h3>
+                <span class="font-primary">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</span>
+            </div>
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-clock"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Iş wagty</h3>
+                <span class="font-primary">Sun - Thu | 07:00 - 23:00 Hours<br>
+                Fri - Sat | 08:00 - 01:00 Hours</span>
+            </div>
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-clipboard"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Aragatnaşyk</h3>
+                <span class="font-primary"><strong>Mobile: </strong>+62-111-222-333<br>
+                <strong>Fax: </strong>(+62)-11-4752-1433</span>
+            </div>
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-heart"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Sosial ssylkalar</h3>
+                <div style="display: flex; justify-content: center">
+                    <a href="#" class="social-icon si-borderless si-facebook">
+                        <i class="icon-line2-social-facebook"></i>
+                        <i class="icon-line2-social-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon si-borderless si-twitter">
+                        <i class="icon-line2-social-twitter"></i>
+                        <i class="icon-line2-social-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon si-borderless si-youtube">
+                        <i class="icon-line2-social-youtube"></i>
+                        <i class="icon-line2-social-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon si-borderless si-email3">
+                        <i class="icon-line2-envelope"></i>
+                        <i class="icon-line2-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

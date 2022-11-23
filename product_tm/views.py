@@ -12,6 +12,8 @@ def index(request):
     last_product = Product.objects.all().order_by('-id')
     last_product = last_product[0:4]
     news = News.objects.all()[0:3]
+    about_us = AboutUs.objects.all()[0:1]
+
 
     context = {
         'banner': banner,
@@ -20,6 +22,7 @@ def index(request):
         'main_page_banners': main_page_banners,
         'last_product': last_product,
         'news': news,
+        'about_us': about_us,
     }
     return render(request, 'home.html', context)
 
@@ -42,10 +45,14 @@ def about(request):
 def all_products(request):
     product = Product.objects.all()
     category = Category.objects.all()
+    about_us = AboutUs.objects.all()[0:1]
+
 
     context = {
         'product': product,
         'category': category,
+        'about_us': about_us,
+
     }
     return render(request, 'all_products.html', context)
 
@@ -53,17 +60,20 @@ def all_products(request):
 def category(request, id):
     product = Product.objects.filter(category__id=id)
     category = Category.objects.all()
+    about_us = AboutUs.objects.all()[0:1]
+
 
     context = {
         'product': product,
         'category': category,
+        'about_us': about_us,
+
     }
     return render(request, 'product.html', context)
 
 
 def contact(request):
-    
-
+    about_us = AboutUs.objects.all()[0:1]
 
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -71,17 +81,17 @@ def contact(request):
         phone_number = request.POST.get('phone_number')
         message = request.POST.get('message')
 
-        data = {
-            'name': name,
-            'email': email,
-            'phone_number': phone_number,
-            'message': message,
-        }
-        
+        contact = ContactUs.objects.create(
+            name=name,
+            email=email,
+            phone=phone_number,
+            message=message,
+        )
+        print(contact)
 
+        contact.save()
+    context = {
+        'about_us': about_us,
 
- 
-
-
-    return render(request, 'contacts.html')
-
+    }
+    return render(request, 'contacts.html', context)

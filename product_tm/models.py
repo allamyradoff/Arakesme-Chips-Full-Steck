@@ -2,8 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50, blank=True, null=True, verbose_name='Ady')
-    icon = models.FileField(upload_to='icon/', blank=True, null=True, verbose_name='Ikonkasy')
+    name = models.CharField(max_length=50, blank=True,
+                            null=True, verbose_name='Ady')
+    icon = models.FileField(upload_to='icon/', blank=True,
+                            null=True, verbose_name='Ikonkasy')
 
     def __str__(self):
         return self.name
@@ -43,7 +45,6 @@ class Banner(models.Model):
         verbose_name='Arkadaky surat'
     )
     main_image = models.ImageField(upload_to='banner/',
-                                   max_length=None,
                                    blank=True,
                                    null=True,
                                    verbose_name='Esasy surat'
@@ -55,6 +56,57 @@ class Banner(models.Model):
         blank=True,
         null=True,
         verbose_name='Haýsy haryda degişli'
+    )
+
+    name_2 = models.CharField(max_length=50, blank=True,
+                              null=True, verbose_name='Ady')
+    title_2 = models.CharField(max_length=50, blank=True,
+                               null=True,  verbose_name='Beýany')
+    big_image_2 = models.ImageField(
+        upload_to='banner/', max_length=None,
+        blank=True,
+        null=True,
+        verbose_name='Arkadaky surat'
+    )
+    main_image_2 = models.ImageField(upload_to='banner/',
+                                     blank=True,
+                                     null=True,
+                                     verbose_name='Esasy surat'
+                                     )
+
+    product_2 = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        verbose_name='Haýsy haryda degişli',
+        related_name='product_2'
+    )
+
+    name_3 = models.CharField(max_length=50, blank=True,
+                              null=True, verbose_name='Ady')
+    title_3 = models.CharField(max_length=50, blank=True,
+                               null=True,  verbose_name='Beýany')
+    big_image_3 = models.ImageField(
+        upload_to='banner/',
+        max_length=None,
+        blank=True,
+        null=True,
+        verbose_name='Arkadaky surat'
+    )
+    main_image_3 = models.ImageField(upload_to='banner/',
+                                     blank=True,
+                                     null=True,
+                                     verbose_name='Esasy surat'
+                                     )
+
+    product_3 = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        verbose_name='Haýsy haryda degişli',
+        related_name='product_3'
     )
 
     def __str__(self):
@@ -87,6 +139,10 @@ class MainPageBanners(models.Model):
                                 blank=True, null=True, verbose_name='Üstunlikleriň suraty_2')
     image_3 = models.ImageField(upload_to='main_page_banners/',
                                 blank=True, null=True, verbose_name='Üstunlikleriň suraty_3')
+    image_4 = models.ImageField(upload_to='main_page_banners/',
+                                blank=True, null=True, verbose_name='Üstunlikleriň suraty_4')
+    image_5 = models.ImageField(upload_to='main_page_banners/',
+                                blank=True, null=True, verbose_name='Üstunlikleriň suraty_5')
 
 
 class TopThree(models.Model):
@@ -145,6 +201,7 @@ class AboutPageBanners(models.Model):
 
 
 class AboutUs(models.Model):
+    logo = models.ImageField(upload_to='logo', blank=True, null=True)
     title = models.CharField(max_length=250, blank=True,
                              null=True, verbose_name='Birinji setir')
     title_2 = models.CharField(
@@ -161,9 +218,8 @@ class AboutUs(models.Model):
         verbose_name_plural = "Biz barada maglumatlar"
 
 
-
 class ContactUs(models.Model):
-    
+
     email = models.EmailField(max_length=50, verbose_name="Email")
     name = models.CharField(max_length=100, verbose_name="Name")
     phone = models.CharField(max_length=50, verbose_name="Phone")
@@ -175,7 +231,6 @@ class ContactUs(models.Model):
 
     class Meta:
         ordering = ("-created_at",)
-
 
     class Meta:
         verbose_name = 'Обратная связь'

@@ -11,4 +11,5 @@ admin.site.register(News)
 admin.site.register(AboutBanner)
 admin.site.register(AboutPageBanners)
 admin.site.register(AboutUs)
+admin.site.register(ContactUs)
 
