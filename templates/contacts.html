@@ -2,15 +2,13 @@
 
 {% load static %}
 {% block content %}
+{% for i in location %}
+<section id="page-title" class="page-title-parallax page-title-dark page-title-center include-header" style="background-image: url('{{i.image.url}}'); background-size: cover; padding: 120px 0 180px;" data-bottom-top="background-position:0 0px;" data-top-bottom="background-position:0px -300px;">
 
-<section id="page-title" class="page-title-parallax page-title-dark page-title-center include-header" style="background-image: url('demos/restaurant/images/sections/food-menu.jpg'); background-size: cover; padding: 120px 0 180px;" data-bottom-top="background-position:0 0px;" data-top-bottom="background-position:0px -300px;">
-
-    <div class="container clearfix">
-        <h1 class="font-secondary text-capitalize ls0" style="font-size: 74px;">Menu</h1>
-        <span class="font-weight-normal">Choose Items from Our Menu</span>
-    </div>
+   
 
 </section>
+{% endfor %}
 
 
 <!-- content page -->
@@ -20,10 +18,12 @@
             <div class="col-md-6 p-b-30">
                 <div class="map_link">
                     <div>
+                        {% for i in location %}
                         <iframe class="map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.892940383798!2d61.8659901!3d37.6046786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f418fd0767f1ac1%3A0x626bc6f10b1dc488!2sTalaba%20Layyk%20Onum!5e0!3m2!1sen!2s!4v1653469702411!5m2!1sen!2s"
+                            src="{{i.map}}"
                             width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {% endfor %}
                         <!-- <div class="contact-map size21" id="google_map" data-map-x="40.614439" data-map-y="-73.926781"
                             data-pin="images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div> -->
                     </div>
@@ -36,31 +36,31 @@
             <div class="col-md-6 p-b-30" >
                 <form class="leave-comment"  action="{% url 'contact' %}"  method="POST">
                     <h4 class="m-text26 p-b-36 p-t-15">
-                        Напишите нам
+                        Biz bilen habarlaşyp bilersiňiz
                     </h4>
                     {% csrf_token %}
 
                     <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Имя">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Adyňyz">
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
                         <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone_number"
-                            placeholder="Телефонный Номер">
+                            placeholder="Telefon belgiňiz">
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
                         <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email"
-                            placeholder="Электронный адрес">
+                            placeholder="E-poçtaňyz">
                     </div>
 
                     <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message"
-                        placeholder="Сообщение"></textarea>
+                        placeholder="Gysgaça maglumat"></textarea>
 
                     <div class="w-size25">
                         <!-- Button -->
                         <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4 btn" type="submit">
-                            Отправить
+                            Ugrat
                         </button>
                     </div>
 
@@ -72,25 +72,25 @@
 
     <div class="container section-contact topmargin-lg clearfix" style="margin-top: -50%;">
         <div class="row clearfix">
-
+            {% for i in location %}
             <div class="col-lg-3 col-md-6 bottommargin-sm center">
                 <i class="i-plain i-xlarge mx-auto mb-0 icon-et-map"></i>
                 <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Salgymyz</h3>
-                <span class="font-primary">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</span>
+                <span class="font-primary">{{i.location}}</span>
             </div>
 
             <div class="col-lg-3 col-md-6 bottommargin-sm center">
                 <i class="i-plain i-xlarge mx-auto mb-0 icon-et-clock"></i>
                 <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Iş wagty</h3>
-                <span class="font-primary">Sun - Thu | 07:00 - 23:00 Hours<br>
-                Fri - Sat | 08:00 - 01:00 Hours</span>
+                <span class="font-primary">{{i.open_to_work_time}}<br>
+                    {{i.close_to_work_time}}</span>
             </div>
 
             <div class="col-lg-3 col-md-6 bottommargin-sm center">
                 <i class="i-plain i-xlarge mx-auto mb-0 icon-et-clipboard"></i>
                 <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Aragatnaşyk</h3>
-                <span class="font-primary"><strong>Mobile: </strong>+62-111-222-333<br>
-                <strong>Fax: </strong>(+62)-11-4752-1433</span>
+                <span class="font-primary"><strong>Telefon: </strong>{{i.phone_number}}<br>
+                <strong>Email: </strong>{{i.email}}</span>
             </div>
 
             <div class="col-lg-3 col-md-6 bottommargin-sm center">
@@ -115,6 +115,7 @@
                     </a>
                 </div>
             </div>
+            {% endfor %}
 
         </div>
     </div>

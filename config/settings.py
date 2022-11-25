@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 
     #local app's
     'product_tm',
+    'product_ru',
+    'product_eng',
 ]
 
 MIDDLEWARE = [

@@ -8,8 +8,8 @@
 						============================================= -->
 						<div id="logo" class="col-auto mr-lg-0 order-lg-2">
 							{% for i in about_us %}
-							<a href="demo-restaurant.html" class="standard-logo"><img src="{{i.logo.url}}" alt="Canvas Logo" style="height:100px; width: 200px; padding: 2%;"></a>
-							<a href="demo-restaurant.html" class="retina-logo"><img src="{{i.logo.url}}" alt="Canvas Logo"></a>
+							<a href="/" class="standard-logo"><img src="{{i.logo.url}}" alt="Canvas Logo" style="height:100px; width: 200px; padding: 2%;"></a>
+							<a href="/" class="retina-logo"><img src="{{i.logo.url}}" alt="Canvas Logo"></a>
 							{% endfor %}
 						</div><!-- #logo end -->
 
@@ -24,6 +24,7 @@
 							<ul class="menu-container">
 								<li class="menu-item"><a class="menu-link" href="/"><div>Baş</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{% url 'about' %}"><div>Biz barada</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{% url 'all_products' %}"><div>Harytlar</div></a></li>
 							</ul>
 
 						</nav>
@@ -31,10 +32,12 @@
 						<nav class="primary-menu col-lg-4 order-lg-3">
 
 							<ul class="menu-container justify-content-lg-end">
-								<li class="menu-item"><a class="menu-link" href="{% url 'all_products' %}"><div>Harytlar</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="{% url 'contact' %}"><div>Habarlaşmak</div></a></li>
-								<!-- <li class="menu-item"><a class="menu-link" href="demo-restaurant-blog.html"><div>Blog</div></a></li>
-								<li class="menu-item"><a class="menu-link color" href="demo-restaurant-reservation.html"><div>Reservation</div></a></li> -->
+								<li class="menu-item"><a class="menu-link" href="{% url 'contact' %}"><div>Kontakt</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="Tel:+99363370891"><div>Sorag ?</div></a></li>
+								{% for i in flag %}
+								<li class="menu-item"><a class="menu-link" href="{% url 'index_ru' %}"><div><img src="{{i.ru.url}}" alt=""></div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{% url 'index_eng' %}"><div><img src="{{i.eng.url}}" alt=""></div></a></li>
+								{% endfor %}
 							</ul>
 
 						</nav><!-- #primary-menu end -->

@@ -3,202 +3,125 @@
 
 {% block content %}
 
-		<!-- Slider
+<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element revslider-wrap h-auto include-header">
+<section id="slider" class="slider-element revslider-wrap h-auto include-header">
 
-			<div id="rev_slider_103_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase" data-source="gallery" style="background:#aaaaaa;padding:0px;">
-			<!-- START REVOLUTION SLIDER 5.4.5 fullscreen mode -->
-				<div id="rev_slider_103_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.5">
-					<ul>
-						{% for i in banner %}
-						<li data-index="rs-225" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-							<!-- MAIN IMAGE -->
-							<img src="{{i.big_image.url}}" data-bgcolor='linear-gradient(90deg, rgba(134,143,150,1) 0%, rgba(89,97,100,1) 100%)' style='background:linear-gradient(90deg, rgba(134,143,150,1) 0%, rgba(89,97,100,1) 100%)' alt="Image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
-							<!-- LAYERS -->
+	<div id="rev_slider_103_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase"
+		data-source="gallery" style="background:#aaaaaa;padding:0px;">
+		<!-- START REVOLUTION SLIDER 5.4.5 fullscreen mode -->
+		<div id="rev_slider_103_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.5">
+			<ul>
+				{% for i in banner %}
+				<li data-index="rs-225" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+					data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+					data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1=""
+					data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+					data-param8="" data-param9="" data-param10="" data-description="">
+					<!-- MAIN IMAGE -->
+					<img src="{{i.big_image.url}}"
+						data-bgcolor='linear-gradient(90deg, rgba(134,143,150,1) 0%, rgba(89,97,100,1) 100%)'
+						style='background:linear-gradient(90deg, rgba(134,143,150,1) 0%, rgba(89,97,100,1) 100%)'
+						alt="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+						data-bgparallax="off" class="rev-slidebg" data-no-retina>
+					<!-- LAYERS -->
 
-							<a href="">
-								<div class="tp-caption rev-btn  tp-resizeme"
-								 id="slide-225-layer-4"
-								 data-x="['left','left','left','left']" data-hoffset="['170','120','70','40']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','110']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="normal"
+					
 
-								data-type="button"
-								data-responsive_offset="on"
+					<!-- LAYER NR. 2 -->
+					<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" id="slide-225-layer-1"
+						data-x="['center','center','center','center']" data-hoffset="['500','500','390','220']"
+						data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+						data-width="none" data-height="none" data-whitespace="nowrap" data-type="image"
+						data-responsive_offset="on"
+						data-frames='[{"delay":400,"speed":750,"sfxcolor":"#2f3b4a","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+						data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+						data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+						style="z-index: 6;"><img src="{{i.main_image.url}}" alt="Image"
+							data-ww="['1000px','1000px','800px','500px']" data-hh="['563px','563px','450','281']"
+							data-no-retina> </div>
 
-								data-frames='[{"delay":500,"speed":1000,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,0,0);bg:rgb(255,255,255);"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[30,30,30,30]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[30,30,30,30]"
+					<!-- LAYER NR. 3 -->
+					<div class="tp-caption   tp-resizeme" id="slide-225-layer-3" data-x="['left','left','left','left']"
+						data-hoffset="['150','100','50','20']" data-y="['middle','middle','middle','middle']"
+						data-voffset="['-177','-177','-177','-157']" data-width="none" data-height="none"
+						data-whitespace="normal" data-type="text" data-responsive_offset="on"
+						data-frames='[{"delay":300,"speed":750,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+						data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
+						data-paddingright="[20,20,20,20]" data-paddingbottom="[10,10,10,10]"
+						data-paddingleft="[20,20,20,20]"
+						style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 10px;font-family:Roboto Condensed;">
+						{{i.name}} </div>
 
-								style="z-index: 5; white-space: normal; font-size: 15px; line-height: 50px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: 2px;font-family:Roboto Condensed;border-color:rgb(255,255,255);border-style:solid;border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Launch 
-								</div>
-							</a>
-							
+					<!-- LAYER NR. 4 -->
+					<div class="tp-caption   tp-resizeme" id="slide-225-layer-2" data-x="['left','left','left','left']"
+						data-hoffset="['150','100','50','20']" data-y="['middle','middle','middle','middle']"
+						data-voffset="['-30','-30','-30','-30']" data-fontsize="['70','70','70','50']"
+						data-lineheight="['70','70','70','50']" data-width="['650','650','620','380']"
+						data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+						data-frames='[{"delay":200,"speed":750,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+						data-textAlign="['left','left','left','left']" data-paddingtop="[20,20,20,20]"
+						data-paddingright="[20,20,20,20]" data-paddingbottom="[30,30,30,30]"
+						data-paddingleft="[20,20,20,20]"
+						style="z-index: 8; min-width: 650px; max-width: 650px; white-space: normal; font-size: 70px; line-height: 70px; font-weight: 400; color: #ffffff; letter-spacing: -2px;font-family:Playfair Display;">
+						{{i.title}} </div>
+				</li>
+				<li data-index="rs-226" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+					data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
+					data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1=""
+					data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+					data-param8="" data-param9="" data-param10="" data-description="">
+					<!-- MAIN IMAGE -->
+					<img src="{{i.big_image_2.url}}"
+						data-bgcolor='linear-gradient(120deg, rgba(203,186,204,1) 0%, rgba(36,57,73,1) 100%)'
+						style='background:linear-gradient(120deg, rgba(203,186,204,1) 0%, rgba(36,57,73,1) 100%)'
+						alt="Image" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+						data-bgparallax="off" class="rev-slidebg" data-no-retina>
+					<!-- LAYERS -->
 
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
-								 id="slide-225-layer-1"
-								 data-x="['center','center','center','center']" data-hoffset="['500','500','390','220']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
+					<!-- LAYER NR. 5 -->
+					<div class="tp-caption   tp-resizeme rs-parallaxlevel-2" id="slide-226-layer-1"
+						data-x="['center','center','center','center']" data-hoffset="['-500','-500','-390','-220']"
+						data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+						data-width="none" data-height="none" data-whitespace="nowrap" data-type="image"
+						data-responsive_offset="on"
+						data-frames='[{"delay":200,"speed":750,"sfxcolor":"#243949","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+						data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+						data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+						style="z-index: 5;"><img src="{{i.main_image_2.url}}" alt="Image"
+							data-ww="['1000px','1000px','800px','500px']" data-hh="['563px','563px','450px','281px']"
+							data-no-retina> </div>
 
-								data-type="image"
-								data-responsive_offset="on"
+					<!-- LAYER NR. 6 -->
 
-								data-frames='[{"delay":400,"speed":750,"sfxcolor":"#2f3b4a","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
 
-								style="z-index: 6;"><img src="{{i.main_image.url}}" alt="Image" data-ww="['1000px','1000px','800px','500px']" data-hh="['563px','563px','450','281']" data-no-retina> </div>
+					<!-- LAYER NR. 7 -->
+					<div class="tp-caption   tp-resizeme" id="slide-226-layer-3" data-x="['left','left','left','left']"
+						data-hoffset="['820','700','540','270']" data-y="['middle','middle','middle','middle']"
+						data-voffset="['-177','-177','-177','-157']" data-width="none" data-height="none"
+						data-whitespace="normal" data-type="text" data-responsive_offset="on"
+						data-frames='[{"delay":400,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+						data-textAlign="['left','left','left','left']" data-paddingtop="[10,10,10,10]"
+						data-paddingright="[20,20,20,20]" data-paddingbottom="[10,10,10,10]"
+						data-paddingleft="[20,20,20,20]"
+						style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 10px;font-family:Roboto Condensed;">
+						{{i.name_2}} </div>
 
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption   tp-resizeme"
-								 id="slide-225-layer-3"
-								 data-x="['left','left','left','left']" data-hoffset="['150','100','50','20']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['-177','-177','-177','-157']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="normal"
-
-								data-type="text"
-								data-responsive_offset="on"
-
-								data-frames='[{"delay":300,"speed":750,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[10,10,10,10]"
-								data-paddingright="[20,20,20,20]"
-								data-paddingbottom="[10,10,10,10]"
-								data-paddingleft="[20,20,20,20]"
-
-								style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 10px;font-family:Roboto Condensed;">{{i.name}} </div>
-
-							<!-- LAYER NR. 4 -->
-							<div class="tp-caption   tp-resizeme"
-								 id="slide-225-layer-2"
-								 data-x="['left','left','left','left']" data-hoffset="['150','100','50','20']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-30','-30']"
-											data-fontsize="['70','70','70','50']"
-								data-lineheight="['70','70','70','50']"
-								data-width="['650','650','620','380']"
-								data-height="none"
-								data-whitespace="normal"
-
-								data-type="text"
-								data-responsive_offset="on"
-
-								data-frames='[{"delay":200,"speed":750,"sfxcolor":"#ffff58","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[20,20,20,20]"
-								data-paddingright="[20,20,20,20]"
-								data-paddingbottom="[30,30,30,30]"
-								data-paddingleft="[20,20,20,20]"
-
-								style="z-index: 8; min-width: 650px; max-width: 650px; white-space: normal; font-size: 70px; line-height: 70px; font-weight: 400; color: #ffffff; letter-spacing: -2px;font-family:Playfair Display;">{{i.title}} </div>
-						</li>
-						<li data-index="rs-226" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-							<!-- MAIN IMAGE -->
-							<img src="{{i.big_image_2.url}}" data-bgcolor='linear-gradient(120deg, rgba(203,186,204,1) 0%, rgba(36,57,73,1) 100%)' style='background:linear-gradient(120deg, rgba(203,186,204,1) 0%, rgba(36,57,73,1) 100%)' alt="Image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
-							<!-- LAYERS -->
-
-							<!-- LAYER NR. 5 -->
-							<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
-								 id="slide-226-layer-1"
-								 data-x="['center','center','center','center']" data-hoffset="['-500','-500','-390','-220']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="nowrap"
-
-								data-type="image"
-								data-responsive_offset="on"
-
-								data-frames='[{"delay":200,"speed":750,"sfxcolor":"#243949","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[0,0,0,0]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[0,0,0,0]"
-
-								style="z-index: 5;"><img src="{{i.main_image_2.url}}" alt="Image" data-ww="['1000px','1000px','800px','500px']" data-hh="['563px','563px','450px','281px']" data-no-retina> </div>
-
-							<!-- LAYER NR. 6 -->
-							<div class="tp-caption rev-btn  tp-resizeme"
-								 id="slide-226-layer-4"
-								 data-x="['left','left','left','left']" data-hoffset="['880','760','600','330']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['150','150','150','110']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="normal"
-
-								data-type="button"
-								data-responsive_offset="on"
-
-								data-frames='[{"delay":500,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,0,0);bg:rgb(255,255,255);"}]'
-								data-textAlign="['inherit','inherit','inherit','inherit']"
-								data-paddingtop="[0,0,0,0]"
-								data-paddingright="[30,30,30,30]"
-								data-paddingbottom="[0,0,0,0]"
-								data-paddingleft="[30,30,30,30]"
-
-								style="z-index: 6; white-space: normal; font-size: 15px; line-height: 50px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: 2px;font-family:Roboto Condensed;border-color:rgb(255,255,255);border-style:solid;border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Launch </div>
-
-							<!-- LAYER NR. 7 -->
-							<div class="tp-caption   tp-resizeme"
-								 id="slide-226-layer-3"
-								 data-x="['left','left','left','left']" data-hoffset="['820','700','540','270']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['-177','-177','-177','-157']"
-											data-width="none"
-								data-height="none"
-								data-whitespace="normal"
-
-								data-type="text"
-								data-responsive_offset="on"
-
-								data-frames='[{"delay":400,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['left','left','left','left']"
-								data-paddingtop="[10,10,10,10]"
-								data-paddingright="[20,20,20,20]"
-								data-paddingbottom="[10,10,10,10]"
-								data-paddingleft="[20,20,20,20]"
-
-								style="z-index: 7; white-space: normal; font-size: 20px; line-height: 20px; font-weight: 400; color: #ffffff; letter-spacing: 10px;font-family:Roboto Condensed;">{{i.name_2}} </div>
-
-							<!-- LAYER NR. 8 -->
-							<div class="tp-caption   tp-resizeme"
-								 id="slide-226-layer-2"
-								 data-x="['left','left','left','left']" data-hoffset="['360','240','110','80']"
-								 data-y="['middle','middle','middle','middle']" data-voffset="['-30','-30','-30','-30']"
-											data-fontsize="['70','70','70','50']"
-								data-lineheight="['70','70','70','50']"
-								data-width="['650','650','620','380']"
-								data-height="none"
-								data-whitespace="normal"
-
-								data-type="text"
-								data-responsive_offset="on"
-
-								data-frames='[{"delay":300,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-								data-textAlign="['right','right','right','right']"
-								data-paddingtop="[20,20,20,20]"
-								data-paddingright="[20,20,20,20]"
-								data-paddingbottom="[30,30,30,30]"
-								data-paddingleft="[20,20,20,20]"
-
-								style="z-index: 8; min-width: 650px; max-width: 650px; white-space: normal; font-size: 70px; line-height: 70px; font-weight: 400; color: #ffffff; letter-spacing: -2px;font-family:Playfair Display;">{{i.title_2}} </div>
-						</li>
-						<!-- SLIDE  -->
-						<!-- <li data-index="rs-227" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+					<!-- LAYER NR. 8 -->
+					<div class="tp-caption   tp-resizeme" id="slide-226-layer-2" data-x="['left','left','left','left']"
+						data-hoffset="['360','240','110','80']" data-y="['middle','middle','middle','middle']"
+						data-voffset="['-30','-30','-30','-30']" data-fontsize="['70','70','70','50']"
+						data-lineheight="['70','70','70','50']" data-width="['650','650','620','380']"
+						data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on"
+						data-frames='[{"delay":300,"speed":750,"sfxcolor":"#cbbacc","sfx_effect":"blockfromright","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoright","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
+						data-textAlign="['right','right','right','right']" data-paddingtop="[20,20,20,20]"
+						data-paddingright="[20,20,20,20]" data-paddingbottom="[30,30,30,30]"
+						data-paddingleft="[20,20,20,20]"
+						style="z-index: 8; min-width: 650px; max-width: 650px; white-space: normal; font-size: 70px; line-height: 70px; font-weight: 400; color: #ffffff; letter-spacing: -2px;font-family:Playfair Display;">
+						{{i.title_2}} </div>
+				</li>
+				<!-- SLIDE  -->
+				<!-- <li data-index="rs-227" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<img src="./3.png" data-bgcolor='linear-gradient(180deg, rgba(22,160,133,1) 0%, rgba(244,208,63,1) 100%)' style='background:linear-gradient(180deg, rgba(22,160,133,1) 0%, rgba(244,208,63,1) 100%)' alt="Image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
 
 							<div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
@@ -283,238 +206,263 @@
 
 								style="z-index: 8; white-space: normal; font-size: 15px; line-height: 50px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: 2px;font-family:Roboto Condensed;border-color:rgb(255,255,255);border-style:solid;border-width:1px 1px 1px 1px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Launch </div>
 						</li> -->
-						{% endfor %}						
-						
-						
-					</ul>
-					<div class="tp-bannertimer" style="height: 10px; background: rgba(0,0,0,0.15);"></div>
-				</div>
-			</div><!-- END REVOLUTION SLIDER -->
-
-		</section>
-
-		<section id="content">
-			<div style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{% static 'demos/restaurant/images/sketch.png' %}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;"></div>
-			<div class="content-wrap" style="overflow: visible;">
-				{% for i in main_page_banners %}
-				
-				<div class="section m-0 clearfix" style="padding: 40px 0; background: url('{{i.image_4.url}}') center center no-repeat; background-size: 100% auto">
 				{% endfor %}
 
-					<div class="container">
 
-						<div class="heading-block border-bottom-0 bottommargin-sm">
-							<h2 class="font-secondary color nott" style="font-size: 52px;">Biziň beýlekilerden tapawudymyz</h2>
-						</div>
-						<div class="row col-mb-50">
-							{% for i in benefit %}
-							<div class="col-lg-3">
-								<div class="feature-box media-box" style="max-width: 400px;">
-									<div class="fbox-media" style="width: 70px; height: auto;">
-										<img src="{{i.image.url}}" alt="Image">
-									</div>
-									<div class="fbox-content px-0">
-										<h3>{{i.title}}</h3>
-										<p>{{i.desc}}</p>
-									</div>
-								</div>
+			</ul>
+			<div class="tp-bannertimer" style="height: 10px; background: rgba(0,0,0,0.15);"></div>
+		</div>
+	</div><!-- END REVOLUTION SLIDER -->
+
+</section>
+
+<section id="content">
+	<div
+		style="position: absolute; top: 0; left: 0; width: 100%; z-index: 3; background: url('{% static 'demos/restaurant/images/sketch.png' %}') repeat center bottom; background-size: auto 100%; height: 40px; margin-top: -40px;">
+	</div>
+	<div class="content-wrap" style="overflow: visible;">
+		{% for i in main_page_banners %}
+
+		<div class="section m-0 clearfix"
+			style="padding: 40px 0; background: url('{{i.image_4.url}}') center center no-repeat; background-size: 100% auto">
+			{% endfor %}
+
+			<div class="container">
+
+				<div class="heading-block border-bottom-0 bottommargin-sm">
+					<h2 class="font-secondary color nott" style="font-size: 52px;">Arakesme Çipsler diňe çipler däl!</h2>
+				</div>
+				<div class="row col-mb-50">
+					{% for i in benefit %}
+					<div class="col-lg-3">
+						<div class="feature-box media-box" style="max-width: 400px;">
+							<div class="fbox-media" style="width: 70px; height: auto;">
+								<img src="{{i.image.url}}" alt="Image">
 							</div>
-
-							{% endfor %}
-						</div>
-
-					</div>
-				</div>
-				{% for i in main_page_banners %}
-				<div class="section mb-0" style="background: #FFF url('{{i.image_5.url}}') no-repeat top left / cover; padding: 60px 0; border-top: 1px solid #EEE;">
-					<div class="container clearfix">
-						<div class="heading-block center mb-0 border-bottom-0">
-							<span class="font-primary" style="font-size: 16px; color: #888">Iň &amp; Meşhurlar</span>
-							<h3 class="nott font-secondary ls0" style="font-size: 60px;">Her dürli tagaly</h3>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-
-				<div class="section food-menu mt-0 p-0">
-					<div class="container-fluid">
-						<div class="row align-items-stretch clearfix">
-							<div class="col-lg-7 clearfix">
-								
-							</div>
-							
-						</div>
-					</div>
-				</div>
-
-				<div class="section mb-0 bg-transparent">
-					<div class="container">
-
-						<div class="row col-mb-50">
-							{% for i in top_three_product %}
-
-							<div class="col-sm-6 col-lg-3">
-								<div class="feature-box media-box">
-									<div class="fbox-media">
-										<a href="#" ><img style="border-radius: 2px; border-radius: 10%;" src="{{i.product.image.url}}" alt="Why choose Us?"></a>
-									</div>
-									<div class="fbox-content px-0">
-										<h3>{{i.product.name}}.<span class="subtitle ls1" style="color:#BBB">#category.</span></h3>
-										<p>{{i.product.desc}}</p>
-									</div>
-								</div>
-							</div>
-							{% endfor %}
-
-							
-						</div>
-
-					</div>
-				</div>
-
-				
-
-
-
-				<div class="clear"></div>
-				{% for i in main_page_banners%}
-				<div class="section bg-transparent">
-					<div class="d-none d-lg-block" style="background: #FFF url('{{i.image_3.url}}') no-repeat center center / cover; height: 100%;position: absolute; top: 0; left: 0; width: 100%"></div>
-					<div class="container clearfix">
-
-						<div class="heading-block border-bottom-0">
-							<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Biz</span>
-							<h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.3;">Siziň hyzmatynyňda</h3>
-						</div>
-						<div class="row clearfix">
-							<div class="col-lg-6 col-md-6 col-12"><img src="{{i.image.url}}" alt="Image"></div>
-							<div class="col-lg-4 col-md-6 col-12">
-								<a href="" class="button button-border button-large button-black button-dark button-rounded nott ls0 font-primary service-button">Our Service</a>
-								<img src="{{i.image_2.url}}" alt="Image" class="d-none d-md-block" style="margin: 0 0 0 -80px;">
+							<div class="fbox-content px-0">
+								<h3>{{i.title}}</h3>
+								<p>{{i.desc}}</p>
 							</div>
 						</div>
-
 					</div>
-				</div>
-				{% endfor %}
 
-				<div class="section mb-0" style="padding: 80px 0; background: #F5F5F5 url('demos/restaurant/images/food-pattern.png') repeat center center;">
-					<div class="container clearfix">
-
-						<div class="heading-block center border-bottom-0">
-							<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Soňky &amp; Harytlar</span>
-							<h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.3;">Çips</h3>
-						</div>
-
-						<div class="row clearfix">
-							{% for i in last_product %}
-							<div class="col-lg-3 col-md-6">
-								<div class="team">
-									<div class="team-image imagescalein">
-										<a href="#"><img style="border-radius: 2px; border-radius: 10%;" src="{{i.image.url}}" alt="{{i.name}}"></a>
-									</div>
-									<div class="team-desc">
-										<div class="team-title">
-											<h4 class="font-primary font-weight-normal ls2">{{i.name}}</h4>
-											<span>#category</span>
-										</div>
-										<p>{{i.desc}}</p>
-									</div>
-								</div>
-							</div>
-							{% endfor %}
-							
-
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 
-				<div class="clear"></div>
+			</div>
+		</div>
+		{% for i in main_page_banners %}
+		<div class="section mb-0"
+			style="background: #FFF url('{{i.image_5.url}}') no-repeat top left / cover; padding: 60px 0; border-top: 1px solid #EEE;">
+			<div class="container clearfix">
+				<div class="heading-block center mb-0 border-bottom-0">
+					<span class="font-primary" style="font-size: 16px; color: #888">Iň  Meşhurlar</span>
+					<h3 class="nott font-secondary ls0" style="font-size: 60px;">Her dürli tagamly</h3>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
 
-				<div style="background: #FFF url('demos/restaurant/images/sections/7.jpg') no-repeat top right; background-size: 100% auto; padding-top: 50px">
-					<div class="container clearfix">
-
-						<div class="heading-block center border-bottom-0">
-							<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Garaşylýan Täzelikler</span>
-							<h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.2;">Taze assortimentlar</h3>
-						</div>
-
-						<div class="row posts-md col-mb-30 mb-0">
-							{%for i in news %}
-							<div class="col-lg-4 col-md-6">
-								<div class="entry">
-									<div class="entry-image mb-0">
-										<a  data-lightbox="image"><img src="{{i.image.url}}" alt="Image 1"></a>
-									</div>
-									<div class="entry-title mt-0 p-4 title-xs nott">
-										<div class="entry-meta mt-0 mb-2">
-										<h2 class="mb-0"><a>{{i.name}}</a></h2>
-											
-										</div>
-
-										<p>{{i.desc}}</p>
-									</div>
-								</div>
-							</div>
-							{% endfor %}
-						</div>
+		<div class="section food-menu mt-0 p-0">
+			<div class="container-fluid">
+				<div class="row align-items-stretch clearfix">
+					<div class="col-lg-7 clearfix">
 
 					</div>
+
 				</div>
+			</div>
+		</div>
 
-				<div class="line clear"></div>
+		<div class="section mb-0 bg-transparent">
+			<div class="container">
 
-				<div class="container section-contact topmargin-lg clearfix">
-					<div class="row clearfix">
+				<div class="row col-mb-50">
+					{% for i in top_three_product %}
 
-						<div class="col-lg-3 col-md-6 bottommargin-sm center">
-							<i class="i-plain i-xlarge mx-auto mb-0 icon-et-map"></i>
-							<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Salgymyz</h3>
-							<span class="font-primary">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</span>
-						</div>
-
-						<div class="col-lg-3 col-md-6 bottommargin-sm center">
-							<i class="i-plain i-xlarge mx-auto mb-0 icon-et-clock"></i>
-							<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Iş wagty</h3>
-							<span class="font-primary">Sun - Thu | 07:00 - 23:00 Hours<br>
-							Fri - Sat | 08:00 - 01:00 Hours</span>
-						</div>
-
-						<div class="col-lg-3 col-md-6 bottommargin-sm center">
-							<i class="i-plain i-xlarge mx-auto mb-0 icon-et-clipboard"></i>
-							<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Aragatnaşyk</h3>
-							<span class="font-primary"><strong>Mobile: </strong>+62-111-222-333<br>
-							<strong>Fax: </strong>(+62)-11-4752-1433</span>
-						</div>
-
-						<div class="col-lg-3 col-md-6 bottommargin-sm center">
-							<i class="i-plain i-xlarge mx-auto mb-0 icon-et-heart"></i>
-							<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Sosial ssylkalar</h3>
-							<div style="display: flex; justify-content: center">
-								<a href="#" class="social-icon si-borderless si-facebook">
-									<i class="icon-line2-social-facebook"></i>
-									<i class="icon-line2-social-facebook"></i>
-								</a>
-								<a href="#" class="social-icon si-borderless si-twitter">
-									<i class="icon-line2-social-twitter"></i>
-									<i class="icon-line2-social-twitter"></i>
-								</a>
-								<a href="#" class="social-icon si-borderless si-youtube">
-									<i class="icon-line2-social-youtube"></i>
-									<i class="icon-line2-social-youtube"></i>
-								</a>
-								<a href="#" class="social-icon si-borderless si-email3">
-									<i class="icon-line2-envelope"></i>
-									<i class="icon-line2-envelope"></i>
-								</a>
+					<div class="col-sm-6 col-lg-3">
+						<div class="feature-box media-box">
+							<div class="fbox-media">
+								<a href="{% url 'product_detail' i.id %}"><img
+										style="border-radius: 2px; border-radius: 10%;" src="{{i.product.image.url}}"
+										alt="Why choose Us?"></a>
+							</div>
+							<div class="fbox-content px-0">
+								<h3>{{i.product.name}}.<span class="subtitle ls1"
+										style="color:#BBB">{{i.product.category.name}}</span></h3>
+								<p>{{i.product.desc}}</p>
 							</div>
 						</div>
+					</div>
+					{% endfor %}
 
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+
+		<div class="clear"></div>
+		{% for i in main_page_banners%}
+		<div class="section bg-transparent">
+			<div class="d-none d-lg-block"
+				style="background: #FFF url('{{i.image_3.url}}') no-repeat center center / cover; height: 100%;position: absolute; top: 0; left: 0; width: 100%">
+			</div>
+			<div class="container clearfix">
+
+				<div class="heading-block border-bottom-0">
+					<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Biz</span>
+					<h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.3;">Siziň hyzmatyňyzda
+					</h3>
+				</div>
+				<div class="row clearfix">
+					<div class="col-lg-6 col-md-6 col-12"><img src="{{i.image.url}}" alt="Image"></div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<a href="{% url 'about' %}"
+							class="button button-border button-large button-black button-dark button-rounded nott ls0 font-primary service-button">Hyzmatlarymyz</a>
+						<img src="{{i.image_2.url}}" alt="Image" class="d-none d-md-block" style="margin: 0 0 0 -80px;">
 					</div>
 				</div>
 
 			</div>
+		</div>
+		{% endfor %}
 
-			<div style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('demos/restaurant/images/sketch-header.png') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;"></div>
-		</section><!-- #content end -->
+		<div class="section mb-0"
+			style="padding: 80px 0; background: #F5F5F5 url('demos/restaurant/images/food-pattern.png') repeat center center;">
+			<div class="container clearfix">
+
+				<div class="heading-block center border-bottom-0">
+					<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Soňky  Harytlar</span>
+					<!-- <h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.3;"></h3> -->
+				</div>
+
+				<div class="row clearfix">
+					{% for i in last_product %}
+					<div class="col-lg-3 col-md-6">
+						<div class="team">
+							<div class="team-image imagescalein">
+								<a href="{% url 'product_detail' i.id %}"><img
+										style="border-radius: 2px; border-radius: 10%;" src="{{i.image.url}}"
+										alt="{{i.name}}"></a>
+							</div>
+							<div class="team-desc">
+								<div class="team-title">
+									<h4 class="font-primary font-weight-normal ls2">{{i.name}}</h4>
+									<span>{{i.category.name}}</span>
+								</div>
+								<p>{{i.desc}}</p>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div
+			style="background: #FFF url('demos/restaurant/images/sections/7.jpg') no-repeat top right; background-size: 100% auto; padding-top: 50px">
+			<div class="container clearfix">
+
+				<div class="heading-block center border-bottom-0">
+					<span class="font-primary ls1" style="font-size: 14px; color: #AAA">Garaşylýan Täzelikler</span>
+					<!-- <h3 class="nott font-secondary ls0" style="font-size: 60px; line-height: 1.2;">Taze assortimentlar -->
+					</h3>
+				</div>
+
+				<div class="row posts-md col-mb-30 mb-0">
+					{% for i in news %}
+					<div class="col-lg-4 col-md-6">
+						<div class="entry">
+							<div class="entry-image mb-0">
+								<a data-lightbox="image"><img src="{{i.image.url}}" alt="Image 1"></a>
+							</div>
+							<div class="entry-title mt-0 p-4 title-xs nott">
+								<div class="entry-meta mt-0 mb-2">
+									<h2 class="mb-0"><a>{{i.name}}</a></h2>
+
+								</div>
+
+								<p>{{i.desc}}</p>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+
+			</div>
+		</div>
+
+		<div class="line clear"></div>
+
+		<div class="container section-contact topmargin-lg clearfix">
+			<div class="row clearfix">
+
+				{% for i in location %}
+				<div class="col-lg-3 col-md-6 bottommargin-sm center">
+					<i class="i-plain i-xlarge mx-auto mb-0 icon-et-map"></i>
+					<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">
+						Salgymyz</h3>
+					<span class="font-primary">{{i.location}}</span>
+				</div>
+
+				<div class="col-lg-3 col-md-6 bottommargin-sm center">
+					<i class="i-plain i-xlarge mx-auto mb-0 icon-et-clock"></i>
+					<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Iş
+						wagty</h3>
+					<span class="font-primary">{{i.open_to_work_time}}<br>
+						{{i.close_to_work_time}}</span>
+				</div>
+
+				<div class="col-lg-3 col-md-6 bottommargin-sm center">
+					<i class="i-plain i-xlarge mx-auto mb-0 icon-et-clipboard"></i>
+					<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">
+						Aragatnaşyk</h3>
+					<span class="font-primary"><strong>Telefon: </strong>{{i.phone_number}}<br>
+						<strong>Email: </strong>{{i.email}}</span>
+				</div>
+
+				<div class="col-lg-3 col-md-6 bottommargin-sm center">
+					<i class="i-plain i-xlarge mx-auto mb-0 icon-et-heart"></i>
+					<h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">
+						Sosial ssylkalar</h3>
+					<div style="display: flex; justify-content: center">
+						<a href="#" class="social-icon si-borderless si-facebook">
+							<i class="icon-line2-social-facebook"></i>
+							<i class="icon-line2-social-facebook"></i>
+						</a>
+						<a href="#" class="social-icon si-borderless si-twitter">
+							<i class="icon-line2-social-twitter"></i>
+							<i class="icon-line2-social-twitter"></i>
+						</a>
+						<a href="#" class="social-icon si-borderless si-youtube">
+							<i class="icon-line2-social-youtube"></i>
+							<i class="icon-line2-social-youtube"></i>
+						</a>
+						<a href="#" class="social-icon si-borderless si-email3">
+							<i class="icon-line2-envelope"></i>
+							<i class="icon-line2-envelope"></i>
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+
+	</div>
+
+	<div
+	
+		style="position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3; background: url('{% static 'demos/restaurant/images/sketch-header.png' %}') repeat center bottom; background-size: auto 100%; height: 40px; margin-bottom: -10px;">
+	</div>
+</section><!-- #content end -->
 {% endblock %}

@@ -1,0 +1,124 @@
+{% extends 'eng/base_eng.html' %}
+
+{% load static %}
+{% block content %}
+{% for i in location %}
+<section id="page-title" class="page-title-parallax page-title-dark page-title-center include-header" style="background-image: url('{{i.image.url}}'); background-size: cover; padding: 120px 0 180px;" data-bottom-top="background-position:0 0px;" data-top-bottom="background-position:0px -300px;">
+
+   
+
+</section>
+{% endfor %}
+
+
+<!-- content page -->
+<section class="bgwhite p-t-66 p-b-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 p-b-30">
+                <div class="map_link">
+                    <div>
+                        {% for i in location %}
+                        <iframe class="map"
+                            src="{{i.map}}"
+                            width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {% endfor %}
+                        <!-- <div class="contact-map size21" id="google_map" data-map-x="40.614439" data-map-y="-73.926781"
+                            data-pin="images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div> -->
+                    </div>
+                   
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 p-b-30" >
+                <form class="leave-comment"  action="{% url 'contact_eng' %}"  method="POST">
+                    <h4 class="m-text26 p-b-36 p-t-15">
+                        You can contact us
+                    </h4>
+                    {% csrf_token %}
+
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Name">
+                    </div>
+
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone_number"
+                            placeholder="Phone number">
+                    </div>
+
+                    <div class="bo4 of-hidden size15 m-b-20">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email"
+                            placeholder="Email">
+                    </div>
+
+                    <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message"
+                        placeholder="Brief information"></textarea>
+
+                    <div class="w-size25">
+                        <!-- Button -->
+                        <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4 btn" type="submit">
+                            Send
+                        </button>
+                    </div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section-contact topmargin-lg clearfix" style="margin-top: -50%;">
+        <div class="row clearfix">
+            {% for i in location %}
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-map"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Our address</h3>
+                <span class="font-primary">{{i.location}}</span>
+            </div>
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-clock"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Working hours</h3>
+                <span class="font-primary">{{i.open_to_work_time}}<br>
+                    {{i.close_to_work_time}}</span>
+            </div>
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-clipboard"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Communication</h3>
+                <span class="font-primary"><strong>Phone: </strong>{{i.phone_number}}<br>
+                <strong>Email: </strong>{{i.email}}</span>
+            </div>
+
+            <div class="col-lg-3 col-md-6 bottommargin-sm center">
+                <i class="i-plain i-xlarge mx-auto mb-0 icon-et-heart"></i>
+                <h3 class="text-uppercase font-body" style="font-size: 22px; font-weight: 700;margin-top: 20px">Social links</h3>
+                <div style="display: flex; justify-content: center">
+                    <a href="#" class="social-icon si-borderless si-facebook">
+                        <i class="icon-line2-social-facebook"></i>
+                        <i class="icon-line2-social-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon si-borderless si-twitter">
+                        <i class="icon-line2-social-twitter"></i>
+                        <i class="icon-line2-social-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon si-borderless si-youtube">
+                        <i class="icon-line2-social-youtube"></i>
+                        <i class="icon-line2-social-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon si-borderless si-email3">
+                        <i class="icon-line2-envelope"></i>
+                        <i class="icon-line2-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
